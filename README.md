@@ -15,3 +15,6 @@ Esse projeto utliza banco de dados em memoria. Sendo assim, todos os dados inser
 Para rodar o projeto, basta abrir o mesmo, utilizando o Visual Studio e executar o Build. 
 As rotas estão mapeadas e descritas na pagina inicial, com o Swagger.
 
+Abaixo, diagrama repesentando a arquitetura implementada, bem como as melhorias sugeridas.
+As melhorias estão representadas pelos elementos na cor Verde.
+
