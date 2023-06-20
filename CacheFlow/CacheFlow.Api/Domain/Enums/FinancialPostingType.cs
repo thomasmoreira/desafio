@@ -1,4 +1,4 @@
-﻿namespace CashFlow.Api.Enums
+﻿namespace CashFlow.Api.Domain.Enums
 {
     public enum FinancialPostingType
     {

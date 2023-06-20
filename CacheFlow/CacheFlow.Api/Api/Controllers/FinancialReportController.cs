@@ -1,7 +1,7 @@
-﻿using CashFlow.Api.Services;
+﻿using CashFlow.Api.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CashFlow.Api.Controllers
+namespace CashFlow.Api.Api.Controllers
 {
 
     /// <summary>
@@ -21,6 +21,11 @@ namespace CashFlow.Api.Controllers
             _financialReportService = financialReportService;
         }
 
+
+        /// <summary>
+        /// Relatório financeiro consolidado
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("process")]
         public async Task<IActionResult> GetFinancialReport()
         {

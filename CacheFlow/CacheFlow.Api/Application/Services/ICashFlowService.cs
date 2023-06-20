@@ -1,7 +1,7 @@
-﻿using CashFlow.Api.Domain.Entities;
-using CashFlow.Api.DTOs;
+﻿using CashFlow.Api.Application.DTOs;
+using CashFlow.Api.Domain.Entities;
 
-namespace CashFlow.Api.Services
+namespace CashFlow.Api.Application.Services
 {
     public interface ICashFlowService
     {

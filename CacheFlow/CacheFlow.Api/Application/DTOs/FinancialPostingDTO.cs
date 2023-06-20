@@ -1,6 +1,7 @@
-﻿using CashFlow.Api.Enums;
+﻿using CashFlow.Api.Domain.Enums;
+using FluentValidation;
 
-namespace CashFlow.Api.DTOs
+namespace CashFlow.Api.Application.DTOs
 {
     public class FinancialPostingDTO
     {

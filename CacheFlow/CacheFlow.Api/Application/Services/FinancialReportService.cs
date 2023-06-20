@@ -1,8 +1,8 @@
-﻿using CashFlow.Api.Domain.Data;
-using CashFlow.Api.DTOs;
+﻿using CashFlow.Api.Application.DTOs;
+using CashFlow.Api.Domain.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace CashFlow.Api.Services
+namespace CashFlow.Api.Application.Services
 {
     public class FinancialReportService : IFinancialReportService
     {

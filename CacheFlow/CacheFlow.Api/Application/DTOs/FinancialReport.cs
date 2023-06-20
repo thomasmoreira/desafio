@@ -1,4 +1,4 @@
-﻿namespace CashFlow.Api.DTOs
+﻿namespace CashFlow.Api.Application.DTOs
 {
     public class FinancialReport
     {

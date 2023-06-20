@@ -1,9 +1,10 @@
-﻿using CashFlow.Api.Domain.Data;
+﻿using CashFlow.Api.Application.DTOs;
+using CashFlow.Api.Domain.Data;
 using CashFlow.Api.Domain.Entities;
-using CashFlow.Api.DTOs;
+using CashFlow.Api.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 
-namespace CashFlow.Api.Services
+namespace CashFlow.Api.Application.Services
 {
     public class CashFlowService : ICashFlowService
     {
@@ -14,15 +15,15 @@ namespace CashFlow.Api.Services
         }
         public async Task<FinancialPosting> AddFinancialPosting(FinancialPostingDTO financialPostingDTO)
         {
-            var amount = 
-                financialPostingDTO.FinancialPostingType == Enums.FinancialPostingType.Debit ? 
+            var amount =
+                financialPostingDTO.FinancialPostingType == FinancialPostingType.Debit ?
                 financialPostingDTO.Amount * -1 :
                 financialPostingDTO.Amount;
 
             var financialPosting =
                 new FinancialPosting
                 (
-                
+
                 financialPostingDTO.FinancialPostingType,
                 amount,
                 financialPostingDTO.Description,
@@ -42,7 +43,7 @@ namespace CashFlow.Api.Services
                 x => new FinancialPostingDTO
                 {
                     FinancialPostingType = x.FinancialPostingType,
-                    Amount = x.Amount,
+                    Amount = x.FinancialPostingType == FinancialPostingType.Debit ? x.Amount*-1 : x.Amount,
                     Description = x.Description,
                     FinancialPostingDate = x.FinancialPostingDate
                 }).ToListAsync();

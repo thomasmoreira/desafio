@@ -1,6 +1,6 @@
-﻿using CashFlow.Api.DTOs;
+﻿using CashFlow.Api.Application.DTOs;
 
-namespace CashFlow.Api.Services
+namespace CashFlow.Api.Application.Services
 {
     public interface IFinancialReportService
     {
